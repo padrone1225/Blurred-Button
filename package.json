@@ -1,0 +1,11 @@
+{
+  "name": "blurred-button",
+  "version": "1.0.0",
+  "description": "This project utilizes pure CSS to create a button that appears blurred.\r The shading effect was implemented to achieve a triadic visual effect.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

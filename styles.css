@@ -1,0 +1,121 @@
+* {
+  border: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --h: 33;
+  --s: 90%;
+  --l: 90%;
+  font-size: calc(16px + (24 - 16) * (100vw - 320px) / (2560 - 320));
+}
+body {
+  background: linear-gradient(hsla(0, 0%, 0%, 0) 37.5%, hsla(0, 0%, 0%, 0.5)),
+    url("https://assets.codepen.io/416221/wood.jpg") center / 39em 39em;
+  color: var(--fg);
+  display: flex;
+  font: 1em/1.5 sans-serif;
+  height: 100vh;
+  min-height: 480px;
+}
+main {
+  margin: auto;
+  padding: 3em 0;
+}
+.icon {
+  background-image: linear-gradient(hsla(0, 0%, 0%, 0.2), hsla(0, 0%, 0%, 0));
+  border-radius: 3.25em;
+  box-shadow: 0 -0.125em 0.25em hsla(0, 0%, 0%, 0.2),
+    0 0.25em 0.25em hsla(var(--h), var(--s), var(--l), 0.5),
+    0 0 0 0.25em hsla(var(--h), var(--s), var(--l), 0.5),
+    0 0.375em 0.5em hsla(var(--h), var(--s), var(--l), 0.5) inset,
+    0 -0.125em 0.375em hsla(var(--h), var(--s), var(--l), 0.4) inset,
+    0 -1.25em 2em 0.5em hsla(var(--h), var(--s), var(--l), 0.3) inset,
+    0 1.25em 0 hsla(var(--h), var(--s), var(--l), 0.3) inset,
+    0 5em 3em hsla(0, 0%, 0%, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  display: flex;
+  position: relative;
+  width: 15.5em;
+  height: 15.5em;
+}
+.icon:before {
+  background: radial-gradient(
+    100% 100% at center,
+    hsla(var(--h), var(--s), 80%, 0.25),
+    hsla(var(--h), var(--s), 80%, 0) 50%
+  );
+  content: "";
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 9em;
+  height: 3em;
+  transform: translateX(-50%);
+}
+.icon__glyph {
+  margin: auto;
+  position: relative;
+  width: 7em;
+  height: 7em;
+}
+.icon__glyph-part {
+  background-image: linear-gradient(
+    -45deg,
+    hsla(var(--h), var(--s), var(--l), 0.8),
+    hsla(var(--h), var(--s), var(--l), 0.2) 67%
+  );
+  border-radius: 0.25em;
+  box-shadow: -0.125em -0.125em 0.25em hsla(var(--h), var(--s), var(--l), 0.5) inset,
+    0.3em 0.3em 0 hsla(var(--h), var(--s), var(--l), 0.2) inset,
+    0.375em 0.375em 0.5em hsla(0, 0%, 0%, 0.3),
+    0.5em 0.5em 0.75em hsla(var(--h), var(--s), 80%, 0.7);
+  position: absolute;
+  bottom: 50%;
+  right: 50%;
+  width: 2.25em;
+  height: 2.25em;
+  transform: rotate(45deg) translate(-0.25em, -0.25em);
+  transform-origin: 100% 100%;
+}
+.icon__glyph-part:nth-child(2) {
+  background-image: linear-gradient(
+    -135deg,
+    hsla(var(--h), var(--s), var(--l), 0.8),
+    hsla(var(--h), var(--s), var(--l), 0.2) 67%
+  );
+  box-shadow: -0.125em 0.125em 0.25em hsla(var(--h), var(--s), var(--l), 0.5)
+      inset,
+    0.3em -0.3em 0 hsla(var(--h), var(--s), var(--l), 0.2) inset,
+    0.375em -0.375em 0.5em hsla(0, 0%, 0%, 0.3),
+    0.5em -0.5em 0.75em hsla(var(--h), var(--s), 80%, 0.7);
+  transform: rotate(135deg) translate(-0.25em, -0.25em);
+}
+.icon__glyph-part:nth-child(3) {
+  background-image: linear-gradient(
+    -225deg,
+    hsla(var(--h), var(--s), var(--l), 0.8),
+    hsla(var(--h), var(--s), var(--l), 0.2) 67%
+  );
+  box-shadow: 0.125em 0.125em 0.25em hsla(var(--h), var(--s), var(--l), 0.5)
+      inset,
+    -0.3em -0.3em 0 hsla(var(--h), var(--s), var(--l), 0.2) inset,
+    -0.375em -0.375em 0.5em hsla(0, 0%, 0%, 0.3),
+    -0.5em -0.5em 0.75em hsla(var(--h), var(--s), 80%, 0.7);
+  transform: rotate(225deg) translate(-0.25em, -0.25em);
+}
+.icon__glyph-part:nth-child(4) {
+  background-image: linear-gradient(
+    -315deg,
+    hsla(var(--h), var(--s), var(--l), 0.8),
+    hsla(var(--h), var(--s), var(--l), 0.2) 67%
+  );
+  box-shadow: 0.125em -0.125em 0.25em hsla(var(--h), var(--s), var(--l), 0.5) inset,
+    -0.3em 0.3em 0 hsla(var(--h), var(--s), var(--l), 0.2) inset,
+    -0.375em 0.375em 0.5em hsla(0, 0%, 0%, 0.3),
+    -0.5em 0.5em 0.75em hsla(var(--h), var(--s), 80%, 0.7);
+  transform: rotate(315deg) translate(-0.25em, -0.25em);
+}
